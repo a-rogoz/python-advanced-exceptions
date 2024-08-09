@@ -21,18 +21,10 @@ def fuel_check():
         print('Fuel tank is full in {}%'.format(100 / 0))
     except ZeroDivisionError as e:
         raise RocketNotReadyError('Problem with fuel gauge') from e
-    
-def batteries_check():
-    # add your own implementation
-    pass
-
-def circuits_check():
-    # add your own implementation
-    pass
 
 crew = ['John', 'Mary', 'Mike']
 fuel = 100
-check_list = [personnel_check, fuel_check, batteries_check, circuits_check]
+check_list = [personnel_check, fuel_check]
 
 print('Final check procedure')
 
